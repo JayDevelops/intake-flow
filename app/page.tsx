@@ -79,7 +79,7 @@ export default function LandingPage() {
           </h2>
           <p className="text-xl text-gray-600 mb-12">
             Every hour spent on admin work is an hour not earning revenue.
-            Here's what's really happening to your business:
+            Here&apos;s what&apos;s really happening to your business:
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
@@ -108,7 +108,8 @@ export default function LandingPage() {
 
           <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">
-              "I spend 70% of my time on this crap instead of actual work"
+              &quot;I spend 70% of my time on this crap instead of actual
+              work&quot;
             </h3>
             <p className="text-gray-600 italic">
               - Freelance consultant describing their manual onboarding process
@@ -281,8 +282,9 @@ export default function LandingPage() {
               ))}
             </div>
             <p className="text-gray-700 mb-6 italic">
-              "My client conversion rate increased by 40% since using
-              IntakeFlow. The professional onboarding makes all the difference."
+              &quot;My client conversion rate increased by 40% since using
+              IntakeFlow. The professional onboarding makes all the
+              difference.&quot;
             </p>
             <div className="flex items-center">
               <div className="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
@@ -305,8 +307,8 @@ export default function LandingPage() {
               ))}
             </div>
             <p className="text-gray-700 mb-6 italic">
-              "The automated workflows are a game-changer. Clients love the
-              professional experience and I love the time savings."
+              &quot;The automated workflows are a game-changer. Clients love the
+              professional experience and I love the time savings.&quot;
             </p>
             <div className="flex items-center">
               <div className="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
