@@ -38,17 +38,6 @@ export default function SignInPage() {
     }, 2000);
   };
 
-  const handleEmailSignIn = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsLoading("email");
-
-    // Simulate email sign in
-    setTimeout(() => {
-      console.log("Email sign in:", email);
-      setIsLoading(null);
-    }, 2000);
-  };
-
   const getErrorMessage = (error: string | null) => {
     switch (error) {
       case "OAuthSignin":

@@ -127,7 +127,7 @@ export default function Dashboard() {
                     <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                     <div className="flex-1">
                       <p className="text-sm font-medium">
-                        John Smith submitted "Web Design Intake"
+                        John Smith submitted &apos;Web Design Intake&apos;
                       </p>
                       <p className="text-xs text-gray-500">2 minutes ago</p>
                     </div>
