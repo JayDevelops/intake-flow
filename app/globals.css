@@ -41,18 +41,70 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
+  /* IntakeFlow Brand Colors */
+  --color-brand-50: oklch(0.97 0.01 250);
+  --color-brand-100: oklch(0.93 0.05 250);
+  --color-brand-200: oklch(0.86 0.1 250);
+  --color-brand-300: oklch(0.76 0.15 250);
+  --color-brand-400: oklch(0.65 0.2 250);
+  --color-brand-500: oklch(0.55 0.25 250);
+  --color-brand-600: oklch(0.45 0.25 250);
+  --color-brand-700: oklch(0.38 0.25 250);
+  --color-brand-800: oklch(0.32 0.2 250);
+  --color-brand-900: oklch(0.26 0.15 250);
+
+  /* Success Colors */
+  --color-success-50: oklch(0.96 0.05 160);
+  --color-success-100: oklch(0.9 0.1 160);
+  --color-success-200: oklch(0.82 0.15 160);
+  --color-success-300: oklch(0.72 0.2 160);
+  --color-success-400: oklch(0.62 0.25 160);
+  --color-success-500: oklch(0.52 0.25 160);
+  --color-success-600: oklch(0.45 0.25 160);
+  --color-success-700: oklch(0.38 0.2 160);
+  --color-success-800: oklch(0.32 0.15 160);
+  --color-success-900: oklch(0.26 0.1 160);
+
+  /* Warning Colors */
+  --color-warning-50: oklch(0.97 0.05 70);
+  --color-warning-100: oklch(0.92 0.1 70);
+  --color-warning-200: oklch(0.85 0.15 70);
+  --color-warning-300: oklch(0.76 0.2 70);
+  --color-warning-400: oklch(0.68 0.25 70);
+  --color-warning-500: oklch(0.6 0.25 70);
+  --color-warning-600: oklch(0.52 0.25 70);
+  --color-warning-700: oklch(0.44 0.2 70);
+  --color-warning-800: oklch(0.36 0.15 70);
+  --color-warning-900: oklch(0.28 0.1 70);
+
+  /* Error Colors */
+  --color-error-50: oklch(0.97 0.05 25);
+  --color-error-100: oklch(0.93 0.1 25);
+  --color-error-200: oklch(0.86 0.15 25);
+  --color-error-500: oklch(0.55 0.25 25);
+  --color-error-600: oklch(0.45 0.25 25);
+  --color-error-700: oklch(0.38 0.2 25);
+  --color-error-800: oklch(0.32 0.15 25);
+
+  /* Animation Easing */
+  --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
+  --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
 }
 
 :root {
-  --radius: 0.625rem;
+  --radius: 0.65rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.141 0.005 285.823);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.141 0.005 285.823);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.141 0.005 285.823);
-  --primary: oklch(0.21 0.006 285.885);
-  --primary-foreground: oklch(0.985 0 0);
+
+  /* IntakeFlow Primary Colors - Professional Blue */
+  --primary: oklch(0.45 0.25 250); /* IntakeFlow brand blue */
+  --primary-foreground: oklch(0.97 0.01 250);
+
   --secondary: oklch(0.967 0.001 286.375);
   --secondary-foreground: oklch(0.21 0.006 285.885);
   --muted: oklch(0.967 0.001 286.375);
@@ -62,7 +114,7 @@
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.92 0.004 286.32);
   --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.705 0.015 286.067);
+  --ring: oklch(0.45 0.25 250); /* Match primary for focus rings */
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -70,12 +122,12 @@
   --chart-5: oklch(0.769 0.188 70.08);
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-primary: oklch(0.21 0.006 285.885);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.45 0.25 250); /* Match IntakeFlow primary */
+  --sidebar-primary-foreground: oklch(0.97 0.01 250);
   --sidebar-accent: oklch(0.967 0.001 286.375);
   --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
   --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.705 0.015 286.067);
+  --sidebar-ring: oklch(0.45 0.25 250); /* Match primary */
 }
 
 .dark {
@@ -85,8 +137,11 @@
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.21 0.006 285.885);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.92 0.004 286.32);
-  --primary-foreground: oklch(0.21 0.006 285.885);
+
+  /* IntakeFlow Primary Colors for Dark Mode */
+  --primary: oklch(0.55 0.25 250); /* Slightly lighter for dark mode */
+  --primary-foreground: oklch(0.97 0.01 250);
+
   --secondary: oklch(0.274 0.006 286.033);
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.274 0.006 286.033);
@@ -96,7 +151,7 @@
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.552 0.016 285.938);
+  --ring: oklch(0.55 0.25 250); /* Match primary for focus rings */
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
   --chart-3: oklch(0.769 0.188 70.08);
@@ -104,19 +159,168 @@
   --chart-5: oklch(0.645 0.246 16.439);
   --sidebar: oklch(0.21 0.006 285.885);
   --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.55 0.25 250); /* Match IntakeFlow primary */
+  --sidebar-primary-foreground: oklch(0.97 0.01 250);
   --sidebar-accent: oklch(0.274 0.006 286.033);
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.552 0.016 285.938);
+  --sidebar-ring: oklch(0.55 0.25 250); /* Match primary */
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Container utility */
+  .container {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Custom button hover effects */
+  .btn-hover-lift {
+    transition: transform 0.2s var(--ease-snappy),
+      box-shadow 0.2s var(--ease-snappy);
+  }
+
+  .btn-hover-lift:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Card hover effects */
+  .card-hover {
+    transition: transform 0.3s var(--ease-fluid),
+      box-shadow 0.3s var(--ease-fluid);
+  }
+
+  .card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Shadow utilities */
+  .shadow-soft {
+    box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.07),
+      0 10px 20px -2px rgba(0, 0, 0, 0.04);
+  }
+
+  .shadow-strong {
+    box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Gradient backgrounds */
+  .bg-gradient-primary {
+    background: linear-gradient(135deg, var(--color-brand-50) 0%, white 100%);
+  }
+
+  .bg-gradient-cta {
+    background: linear-gradient(
+      135deg,
+      var(--primary) 0%,
+      var(--color-brand-700) 100%
+    );
+  }
+
+  /* Text utilities */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* IntakeFlow specific button styles */
+  .btn-primary {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    border: 1px solid var(--primary);
+  }
+
+  .btn-primary:hover {
+    background-color: var(--color-brand-700);
+    border-color: var(--color-brand-700);
+  }
+
+  .btn-primary:focus {
+    outline: none;
+    ring: 2px solid var(--ring);
+    ring-offset: 2px;
+  }
+}
+
+@layer utilities {
+  /* Custom animations */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-out;
+  }
+
+  /* Focus styles */
+  .focus-ring {
+    @apply outline-none ring-2 ring-primary ring-offset-2;
+  }
+
+  /* Brand color utilities */
+  .text-brand-600 {
+    color: var(--color-brand-600);
+  }
+
+  .bg-brand-50 {
+    background-color: var(--color-brand-50);
+  }
+
+  .bg-brand-100 {
+    background-color: var(--color-brand-100);
+  }
+
+  .bg-brand-600 {
+    background-color: var(--color-brand-600);
+  }
+
+  .bg-brand-700 {
+    background-color: var(--color-brand-700);
+  }
+
+  .text-success-500 {
+    color: var(--color-success-500);
+  }
+
+  .bg-error-50 {
+    background-color: var(--color-error-50);
+  }
+
+  .border-error-200 {
+    border-color: var(--color-error-200);
+  }
+
+  .text-error-600 {
+    color: var(--color-error-600);
+  }
+
+  .text-error-700 {
+    color: var(--color-error-700);
+  }
+
+  .text-error-800 {
+    color: var(--color-error-800);
   }
 }
