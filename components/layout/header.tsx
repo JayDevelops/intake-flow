@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Zap, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import AuthStatus from "../AuthStatus";
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -44,12 +45,7 @@ export function Header() {
             >
               Reviews
             </Link>
-            <Button
-              variant="outline"
-              className="border-primary-600 text-primary-600 hover:bg-primary-50 bg-transparent"
-            >
-              Sign In
-            </Button>
+            <AuthStatus />
             <Button>Start Free Trial</Button>
           </nav>
 
