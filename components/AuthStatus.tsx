@@ -19,7 +19,7 @@ const AuthStatus = () => {
 
   //  If the user is loading into the session, then return no component
   if (status === "loading")
-    return <Skeleton className="h-12 w-12 rounded-full" />;
+    return <Skeleton className="h-12 w-18 rounded-b-lg" />;
 
   //  If no user is logged in, return login component
   if (status === "unauthenticated") {
