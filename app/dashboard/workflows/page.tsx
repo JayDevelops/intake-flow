@@ -2,7 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Plus, Zap } from "lucide-react";
 import Link from "next/link";
 import WorkflowStatsCards from "./WorkflowStatsCards";
-import WorkFlow, { WorkFlowType } from "./WorkFlow";
+import WorkFlow from "./WorkFlow";
+import { WorkFlowType } from "@/utils/workFlowTypes";
 import { Card, CardContent } from "@/components/ui/card";
 
 /* UPDATE LATER WITH ACTUAL DATA, STATIC DATA FOR NOW */

@@ -21,16 +21,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-
-export interface WorkFlowType {
-  id: number;
-  name: string;
-  description: string;
-  status: "active" | "draft";
-  triggers: number;
-  lastRun?: string;
-  steps?: { type: string; name: string }[];
-}
+import { WorkFlowType } from "@/utils/workFlowTypes";
 
 export default function WorkFlow({ workFlow }: { workFlow: WorkFlowType }) {
   return (
