@@ -86,7 +86,7 @@ export default function WorkFlow({ workFlow }: { workFlow: WorkFlowType }) {
                 </Button>
               )}
               <Button variant="outline" size="sm" asChild>
-                <Link href={`/dashboard/workflows/${workFlow.id}/edit`}>
+                <Link href={`/dashboard/workflows/edit/${workFlow.id}`}>
                   Edit
                 </Link>
               </Button>
