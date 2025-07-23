@@ -37,7 +37,7 @@ export default function SignOutPage() {
         </div>
 
         <Card className="shadow-lg border-0">
-          <CardHeader className="text-center space-y-1 pb-4">
+          <CardHeader className="text-center space-y-1 pt-4">
             <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <LogOut className="h-8 w-8 text-color-error-60" />
             </div>

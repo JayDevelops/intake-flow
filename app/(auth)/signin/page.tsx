@@ -13,7 +13,6 @@ import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 import providers from "@/components/signInProviders";
 import { Button } from "@/components/ui/button";
-import { signIn } from "next-auth/react";
 
 export default function SignInPage() {
   const searchParams = useSearchParams();
@@ -23,47 +22,7 @@ export default function SignInPage() {
   const [isLoading, setIsLoading] = useState<string | null>(null);
   const [showEmailForm, setShowEmailForm] = useState(false);
 
-  const error = searchParams?.get("error");
   const callbackUrl = searchParams?.get("callbackUrl") || "/dashboard";
-
-  const handleProviderSignIn = async (providerId: string) => {
-    setIsLoading(providerId);
-
-    // Simulate Auth.js signIn call
-    // In real app: await signIn(providerId, { callbackUrl })
-    setTimeout(() => {
-      console.log(`Signing in with ${providerId}`);
-      setIsLoading(null);
-      // Redirect would happen here
-    }, 2000);
-  };
-
-  const getErrorMessage = (error: string | null) => {
-    switch (error) {
-      case "OAuthSignin":
-        return "Error occurred during OAuth sign in. Please try again.";
-      case "OAuthCallback":
-        return "Error occurred during OAuth callback. Please try again.";
-      case "OAuthCreateAccount":
-        return "Could not create OAuth account. Please try again.";
-      case "EmailCreateAccount":
-        return "Could not create email account. Please try again.";
-      case "Callback":
-        return "Error occurred during callback. Please try again.";
-      case "OAuthAccountNotLinked":
-        return "Email already exists with different provider. Please sign in with your original provider.";
-      case "EmailSignin":
-        return "Check your email for the sign in link.";
-      case "CredentialsSignin":
-        return "Invalid credentials. Please check your email and password.";
-      case "SessionRequired":
-        return "Please sign in to access this page.";
-      default:
-        return error
-          ? "An error occurred during sign in. Please try again."
-          : null;
-    }
-  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
@@ -85,12 +44,12 @@ export default function SignInPage() {
         </div>
 
         <Card className="shadow-lg border-0">
-          <CardHeader className="pb-4">
+          <CardHeader className="pt-4">
             <CardTitle className="text-xl text-center">
               Sign in to your account
             </CardTitle>
           </CardHeader>
-          <CardContent className="-pt-12">
+          <CardContent>
             <div className="space-y-3">
               {Object.values(providers)
                 .filter((p) => p.type === "oauth")
